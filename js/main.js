@@ -1,40 +1,70 @@
+const home = document.getElementById('home')
+const aboutMe = document.getElementById('about-me')
+const products = document.getElementById('products')
+const contact = document.getElementById('contact')
+
+const homeBtn = document.getElementById('menu-home')
+const aboutMeBtn = document.getElementById('menu-about')
+const productsBtn = document.getElementById('menu-products')
+const contactBtn = document.getElementById('menu-contact')
 
 
-const pageSection = 'home';
-const mainDiv = document.getElementById('content__container')
 
-export const showHome = (mainContent) => {
+
+homeBtn.addEventListener('click', () => {
     
-    const mainImage = document.createElement('img')
-    const mainInfo = document.createElement('div')
+    home.classList.remove('hidden')
+    aboutMe.classList.add('hidden')
+    products.classList.add('hidden')
+    contact.classList.add('hidden')
 
-    const mainTitle = document.createElement('h1')
-    const mainText = document.createElement('p')
+    homeBtn.classList.add('button__highlight')
+    aboutMeBtn.classList.remove('button__highlight')
+    productsBtn.classList.remove('button__highlight')
+    contactBtn.classList.remove('button__highlight')
+})
 
-    mainImage.src = '../../Screenshot_1.png'
+aboutMeBtn.addEventListener('click', () => {
+    
+    home.classList.add('hidden')
+    aboutMe.classList.remove('hidden')
+    products.classList.add('hidden')
+    contact.classList.add('hidden')
 
-    mainInfo.classList.add('info__container')
+    homeBtn.classList.remove('button__highlight')
+    aboutMeBtn.classList.add('button__highlight')
+    productsBtn.classList.remove('button__highlight')
+    contactBtn.classList.remove('button__highlight')
+})
 
-    mainTitle.innerText = 'Título'
+productsBtn.addEventListener('click', () => {
+    
+    home.classList.add('hidden')
+    aboutMe.classList.add('hidden')
+    products.classList.remove('hidden')
+    contact.classList.add('hidden')
+    
+    homeBtn.classList.remove('button__highlight')
+    aboutMeBtn.classList.remove('button__highlight')
+    productsBtn.classList.add('button__highlight')
+    contactBtn.classList.remove('button__highlight')
+})
 
-    mainText.innerText = 'Lorem ipsum dolor amen setLorem ipsum dolor amen set Lorem ipsum dolor amen set Lorem ipsum dolor amen set'
+contactBtn.addEventListener('click', () => {
+    
+    home.classList.add('hidden')
+    aboutMe.classList.add('hidden')
+    products.classList.add('hidden')
+    contact.classList.remove('hidden')
+
+    homeBtn.classList.remove('button__highlight')
+    aboutMeBtn.classList.remove('button__highlight')
+    productsBtn.classList.remove('button__highlight')
+    contactBtn.classList.add('button__highlight')
+})
 
 
-    mainInfo.append(mainTitle, mainText)
-    mainContent.append(mainImage, mainInfo)
-}
-
-const sectionHandler = () => {
-
-}
 
 
-const renderSelector = () => {
-    if(pageSection == 'home') {
-        showHome(mainDiv)
-    }
-}
-
-renderSelector()
 
 

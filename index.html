@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js" type="module" defer></script>
     
     <title>Pedro Garrastazu Frey - Nutricionista</title>
 </head>
@@ -19,14 +20,45 @@
         <img src="" alt="Pedro Garrastazu Logo">
         <nav>
             <ul class="menu__container">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#" name="home" id="menu-home" class="button__highlight">Início</a></li>
+                <li><a href="#" name="about-me" id="menu-about">Sobre mim</a></li>
+                <li><a href="#" name="products" id="menu-products">Serviços</a></li>
+                <li><a href="#" name="contact" id="menu-contact">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main id="content__container">
+        <div id="home" class="container__flex--row">
+            <img class="image__container" src="./images/Screenshot_1.png">
+            <div>
+            <h2>Título</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nesciunt commodi dolorem nulla nemo! A, quod possimus reprehenderit dolores ullam quos corporis autem, enim mollitia voluptates cupiditate unde quia maxime!</p>
+            </div>
+        </div>
+
+        <div id="about-me" class="container__flex--row hidden">
+            <img class="image__container" src="./images/Screenshot_360.png">
+            <div>
+            <h2>Título 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nesciunt commodi dolorem nulla nemo! A, quod possimus reprehenderit dolores ullam quos corporis autem, enim mollitia voluptates cupiditate unde quia maxime!</p>
+            </div>
+        </div>
+
+        <div id="products" class="container__flex--row hidden">
+            <img class="image__container" src="./images/Screenshot_1.png">
+            <div>
+            <h2>Título 3 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nesciunt commodi dolorem nulla nemo! A, quod possimus reprehenderit dolores ullam quos corporis autem, enim mollitia voluptates cupiditate unde quia maxime!</p>
+            </div>
+        </div>
+
+        <div id="contact" class="container__flex--row hidden">
+            <img class="image__container" src="./images/Screenshot_360.png">
+            <div>
+            <h2>Título 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nesciunt commodi dolorem nulla nemo! A, quod possimus reprehenderit dolores ullam quos corporis autem, enim mollitia voluptates cupiditate unde quia maxime!</p>
+            </div>
+        </div>
    
     </main>
     <footer class="footer__container">
@@ -36,7 +68,6 @@
 
 </body>
 
-<script src="js/main.js" type="module" defer></script>
 
 
 
